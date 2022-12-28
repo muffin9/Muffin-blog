@@ -1,11 +1,18 @@
 import React, { FunctionComponent } from 'react'
 import ProfileImage from 'components/Main/ProfileImage'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
-const Introduction: FunctionComponent = function () {
+type IntroductionProps = {
+  profileImage: IGatsbyImageData
+}
+
+const Introduction: FunctionComponent<IntroductionProps> = function ({
+  profileImage,
+}) {
   return (
     <div className="w-full text-white bg-black">
       <div className="w-[48rem] h-[25rem] md:w-full md:h-[18.75rem] md:px-5 m-auto flex flex-col justify-center items-start">
-        <ProfileImage />
+        <ProfileImage profileImage={profileImage} />
         <div>
           <div className="text-xl font-normal md:text-base">
             Nice to Meet You,

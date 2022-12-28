@@ -1,21 +1,19 @@
 import { Link } from 'gatsby'
 import React, { FunctionComponent } from 'react'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
-type PostItemProps = {
-  title: string
-  date: string
-  categories: string[]
-  summary: string
-  thumbnail: string
-  link: string
-}
+import { PostFrontmatterType } from 'types/PostItem.types'
+
+type PostItemProps = PostFrontmatterType & { link: string }
 
 const PostItem: FunctionComponent<PostItemProps> = function ({
   title,
   date,
   categories,
   summary,
-  thumbnail,
+  thumbnail: {
+    childImageSharp: { gatsbyImageData },
+  },
   link,
 }) {
   /*
@@ -26,9 +24,9 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
       className="flex flex-col rounded-lg cursor-pointer shadow-card transition-all duration-300 hover:shadow-hover_card"
       to={link}
     >
-      <img
+      <GatsbyImage
         className="w-full h-[12.5rem] rounded-t-xl object-cover"
-        src={thumbnail}
+        image={gatsbyImageData}
         alt="Post Item Image"
       />
       <div className="flex flex-col flex-1 p-3.5">
