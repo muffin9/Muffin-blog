@@ -1511,6 +1511,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fortawesome/fontawesome-common-types@npm:6.2.1":
+  version: 6.2.1
+  resolution: "@fortawesome/fontawesome-common-types@npm:6.2.1"
+  checksum: 1a6e202beac46bc7e7bf791b37b6164b15453cc70b078456121c77d516a1077a1cfdab8aa9c77358c71f87f54560c0d9cbfb440cfb871f6d0f1f4671aabf9a0a
+  languageName: node
+  linkType: hard
+
+"@fortawesome/fontawesome-svg-core@npm:^6.2.1":
+  version: 6.2.1
+  resolution: "@fortawesome/fontawesome-svg-core@npm:6.2.1"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": 6.2.1
+  checksum: 16caf6052b77c03826274325d4bd76d11cba486411c3101a635d3342dd764df8f5b4789456c9caa1667c232853a670f91dddf0449218e5fea7a27f4396b838af
+  languageName: node
+  linkType: hard
+
+"@fortawesome/free-solid-svg-icons@npm:^6.2.1":
+  version: 6.2.1
+  resolution: "@fortawesome/free-solid-svg-icons@npm:6.2.1"
+  dependencies:
+    "@fortawesome/fontawesome-common-types": 6.2.1
+  checksum: a24170b676fced926cccdd08171357b20714483ceddeb052985a9acae3a347ffe853de2e757bf95cc7add74807d82eb1cc578e17430c32ca2c6a844c8276f91a
+  languageName: node
+  linkType: hard
+
+"@fortawesome/react-fontawesome@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@fortawesome/react-fontawesome@npm:0.2.0"
+  dependencies:
+    prop-types: ^15.8.1
+  peerDependencies:
+    "@fortawesome/fontawesome-svg-core": ~1 || ~6
+    react: ">=16.3"
+  checksum: f652a0c2172e7b209e2d9e7e511f9b8c17abad85f55e0bd09bb1175ea1927693215da47eb6cd95b1f3a23bd124368553c677907fa76cb17c5093afc1fcffe338
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.1.3":
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
@@ -1596,11 +1633,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/plugin-helpers@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "@graphql-codegen/plugin-helpers@npm:3.1.1"
+"@graphql-codegen/plugin-helpers@npm:^3.1.1, @graphql-codegen/plugin-helpers@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "@graphql-codegen/plugin-helpers@npm:3.1.2"
   dependencies:
-    "@graphql-tools/utils": ^8.8.0
+    "@graphql-tools/utils": ^9.0.0
     change-case-all: 1.0.15
     common-tags: 1.8.2
     import-from: 4.0.0
@@ -1608,61 +1645,61 @@ __metadata:
     tslib: ~2.4.0
   peerDependencies:
     graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: 22a15d4638ad449f654dab7a1e4968a82a50e3ab38f3b0974ae767a0a80e251fece436933f575f158da67564331d6046223b83eb10e0f1b93e78a15d7d0f684e
+  checksum: 4d0c615738570681b5ffd3c07305a35d6aa3e5fd87c9199c0a670b95529ab865b1df978ce584d5b415107a567ac484e56a48db129a6d1d2eb8a254fbd3260e39
   languageName: node
   linkType: hard
 
-"@graphql-codegen/schema-ast@npm:^2.6.0":
-  version: 2.6.0
-  resolution: "@graphql-codegen/schema-ast@npm:2.6.0"
+"@graphql-codegen/schema-ast@npm:^2.6.1":
+  version: 2.6.1
+  resolution: "@graphql-codegen/schema-ast@npm:2.6.1"
   dependencies:
-    "@graphql-codegen/plugin-helpers": ^3.1.1
-    "@graphql-tools/utils": ^8.8.0
+    "@graphql-codegen/plugin-helpers": ^3.1.2
+    "@graphql-tools/utils": ^9.0.0
     tslib: ~2.4.0
   peerDependencies:
     graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: a32e22fdd5cdab743ed7920249de6b00cbca0742633cfdbfed330c04c397bf1e0179ab141303a70cf733b6db27e537a67c6b6b50e70fb1d0767fc8d8de7a129f
+  checksum: f44338ac66e6a1f6238c33cdf65778bb467fe5a93767988135cb4e112d3be4d3c7e8aeeffe323754e8d6b0cbc5a52cb71452bfc42a15bc7031ebaa9b3d5da676
   languageName: node
   linkType: hard
 
 "@graphql-codegen/typescript-operations@npm:^2.3.5":
-  version: 2.5.10
-  resolution: "@graphql-codegen/typescript-operations@npm:2.5.10"
+  version: 2.5.11
+  resolution: "@graphql-codegen/typescript-operations@npm:2.5.11"
   dependencies:
-    "@graphql-codegen/plugin-helpers": ^3.1.1
-    "@graphql-codegen/typescript": ^2.8.5
-    "@graphql-codegen/visitor-plugin-common": 2.13.5
+    "@graphql-codegen/plugin-helpers": ^3.1.2
+    "@graphql-codegen/typescript": ^2.8.6
+    "@graphql-codegen/visitor-plugin-common": 2.13.6
     auto-bind: ~4.0.0
     tslib: ~2.4.0
   peerDependencies:
     graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: ddd3152cfefa3b17b25a708eed19c7b513b75b398f855aec37d9fe01c0c4f45487ca3d130f799a6361dd75579ca93582832300809b0ed1918ad04c01b79e56dd
+  checksum: 60a833251db8c91635fffb5d8793dbe5951c13955fcd755da9bf992194dedd81119c1439448902bea8042b659296db63cdea474e40230876f314bf77ca660b1c
   languageName: node
   linkType: hard
 
-"@graphql-codegen/typescript@npm:^2.4.8, @graphql-codegen/typescript@npm:^2.8.5":
-  version: 2.8.5
-  resolution: "@graphql-codegen/typescript@npm:2.8.5"
+"@graphql-codegen/typescript@npm:^2.4.8, @graphql-codegen/typescript@npm:^2.8.6":
+  version: 2.8.6
+  resolution: "@graphql-codegen/typescript@npm:2.8.6"
   dependencies:
-    "@graphql-codegen/plugin-helpers": ^3.1.1
-    "@graphql-codegen/schema-ast": ^2.6.0
-    "@graphql-codegen/visitor-plugin-common": 2.13.5
+    "@graphql-codegen/plugin-helpers": ^3.1.2
+    "@graphql-codegen/schema-ast": ^2.6.1
+    "@graphql-codegen/visitor-plugin-common": 2.13.6
     auto-bind: ~4.0.0
     tslib: ~2.4.0
   peerDependencies:
     graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: dd13cd82f202e82591262fd515b4cfd6a9d270b1d9447240ed75f0b374565e0c4a13297724bc94df5a7ad1a400cf63f83c439af9155fd95386d813481845bd01
+  checksum: 15f75f1cfea8d632d05a0836cfe657f580d7a49bfafe9b8a143b32f71985b09773dbc45e1e09010654789ea4dba15952767bc3dc412bda16b90eb57a3657f328
   languageName: node
   linkType: hard
 
-"@graphql-codegen/visitor-plugin-common@npm:2.13.5":
-  version: 2.13.5
-  resolution: "@graphql-codegen/visitor-plugin-common@npm:2.13.5"
+"@graphql-codegen/visitor-plugin-common@npm:2.13.6":
+  version: 2.13.6
+  resolution: "@graphql-codegen/visitor-plugin-common@npm:2.13.6"
   dependencies:
-    "@graphql-codegen/plugin-helpers": ^3.1.1
+    "@graphql-codegen/plugin-helpers": ^3.1.2
     "@graphql-tools/optimize": ^1.3.0
     "@graphql-tools/relay-operation-optimizer": ^6.5.0
-    "@graphql-tools/utils": ^8.8.0
+    "@graphql-tools/utils": ^9.0.0
     auto-bind: ~4.0.0
     change-case-all: 1.0.15
     dependency-graph: ^0.11.0
@@ -1671,7 +1708,7 @@ __metadata:
     tslib: ~2.4.0
   peerDependencies:
     graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: 130c82c63d647b5af55ce9e463765228e7aebc9c50a3670590c7bb409c997e8fabd10987d63f175a51ad3e3847d18c59ac3af6dc620d529b7e974dd80f15118e
+  checksum: 3e3bcbe6c7f3fa665b53f35016bce4385fd045ef54b1a986add0b86a14abec6c5b30201496b210ab493afe6bb89bed80f81d164efd643155621fd7bf7fbafec7
   languageName: node
   linkType: hard
 
@@ -1770,7 +1807,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-tools/utils@npm:9.1.3, @graphql-tools/utils@npm:^9.1.1":
+"@graphql-tools/utils@npm:9.1.3, @graphql-tools/utils@npm:^9.0.0, @graphql-tools/utils@npm:^9.1.1":
   version: 9.1.3
   resolution: "@graphql-tools/utils@npm:9.1.3"
   dependencies:
@@ -7622,6 +7659,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gatsby-starter-default@workspace:."
   dependencies:
+    "@fortawesome/fontawesome-svg-core": ^6.2.1
+    "@fortawesome/free-solid-svg-icons": ^6.2.1
+    "@fortawesome/react-fontawesome": ^0.2.0
     "@typescript-eslint/eslint-plugin": latest
     "@typescript-eslint/parser": latest
     autoprefixer: ^10.4.13

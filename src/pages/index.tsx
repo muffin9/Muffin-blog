@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useMemo } from 'react'
 
 import Introduction from 'components/Main/Introduction'
-import Footer from 'components/Common/Footer'
+import Template from 'components/Common/Template'
 import CategoryList, { CategoryListProps } from 'components/Main/CategoryList'
 import PostList from 'components/Main/PostList'
 import { graphql } from 'gatsby'
@@ -66,15 +66,14 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
   )
 
   return (
-    <div className="h-screen flex flex-col">
+    <Template>
       <Introduction profileImage={gatsbyImageData} />
       <CategoryList
         selectedCategory={selectedCategory}
         categoryList={categoryList}
       />
       <PostList selectedCategory={selectedCategory} posts={edges} />
-      <Footer />
-    </div>
+    </Template>
   )
 }
 
@@ -88,6 +87,9 @@ export const getPostList = graphql`
       edges {
         node {
           id
+          fields {
+            slug
+          }
           frontmatter {
             title
             summary
