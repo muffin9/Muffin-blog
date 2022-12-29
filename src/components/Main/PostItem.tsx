@@ -16,9 +16,6 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
   },
   link,
 }) {
-  /*
-  Title, Summary -> overflow-wrap: break-word;
-  */
   return (
     <Link
       className="flex flex-col rounded-lg cursor-pointer shadow-card transition-all duration-300 hover:shadow-hover_card"

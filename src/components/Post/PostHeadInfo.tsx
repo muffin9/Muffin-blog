@@ -16,7 +16,7 @@ const PostHeadInfo: FunctionComponent<PostHeadInfoProps> = function ({
   const goBackPage = () => window.history.back()
 
   return (
-    <div className="w-[48rem] h-full m-auto py-[3.75rem] flex flex-col text-white md:w-full md:py-[2.5rem] md:px-5">
+    <div className="w-[48rem] h-[20rem] m-auto py-[3.75rem] flex flex-col text-white md:w-full md:py-[2.5rem] md:px-5">
       <div
         className="w-10 h-10 grid place-items-center rounded-full text-2xl bg-white text-black cursor-pointer shadow-card md:w-7 md:h-7 md:text-lg"
         onClick={goBackPage}
