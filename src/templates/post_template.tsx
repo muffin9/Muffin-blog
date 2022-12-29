@@ -4,13 +4,24 @@ import React, { FunctionComponent } from 'react'
 import PostHead from 'components/Post/PostHead'
 import PostContent from 'components/Post/PostContent'
 import CommentWidget from 'components/Post/CommentWidget'
+import { PostListItemType } from 'types/PostItem.types'
 
-type PostTemplateProps = {}
+type PostTemplateProps = {
+  data: {
+    allMarkdownRemark: {
+      edges: PostListItemType[]
+    }
+  }
+  location: {
+    href: string
+  }
+}
 
 const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
   data: {
     allMarkdownRemark: { edges },
   },
+  location: { href },
 }) {
   const {
     node: {
@@ -22,14 +33,14 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
         categories,
         thumbnail: {
           childImageSharp: { gatsbyImageData },
+          publicURL,
         },
       },
     },
   } = edges[0]
 
   return (
-    <Template>
-      {' '}
+    <Template title={title} description={summary} url={href} image={publicURL}>
       <PostHead
         title={title}
         date={date}
@@ -59,6 +70,7 @@ export const queryMarkdownDataBySlug = graphql`
               childImageSharp {
                 gatsbyImageData
               }
+              publicURL
             }
           }
         }

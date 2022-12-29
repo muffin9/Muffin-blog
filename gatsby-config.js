@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `머핀의 개발 블로그`,
+    description: `여러가지를 경험 하며 저의 능력으로 여러사람이 행복해지길 원하는 개발자 입니다.`,
+    author: `Muffin`,
+    siteUrl: 'https://muffin9.github.io'
   },
   plugins: [
     {
@@ -24,6 +25,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-postcss',
+    'gatsby-plugin-emotion',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -74,6 +76,20 @@ module.exports = {
             options: {
               target: '_blank',
               rel: 'nofollow',
+            },
+          },
+          {
+            resolve: 'gatsby-plugin-canonical-urls',
+            options: {
+              siteUrl: 'https://muffin9.github.io',
+              stripQueryString: true,
+            },
+          },
+          'gatsby-plugin-sitemap',
+          {
+            resolve: 'gatsby-plugin-robots-txt',
+            options: {
+              policy: [{ userAgent: '*', allow: '/' }],
             },
           },
         ],

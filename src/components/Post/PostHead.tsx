@@ -13,9 +13,9 @@ const PostHead: FunctionComponent<PostHeadProps> = function ({
   thumbnail,
 }) {
   return (
-    <div className="w-full h-[25rem] relative object-cover md:h-[18.75rem]">
+    <div className="w-full h-[20rem] relative object-cover md:h-[18.75rem]">
       <GatsbyImage
-        className="w-full h-[25rem] absolute z-[-1] brightness-[0.25] md:h-[18.75rem]"
+        className="w-full h-[20rem] absolute z-[-1] brightness-[0.25] md:h-[18.75rem]"
         image={thumbnail}
         alt="thumbnail"
       />
