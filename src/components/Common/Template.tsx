@@ -1,5 +1,6 @@
 import React, { FunctionComponent, ReactNode } from 'react'
 import Footer from 'components/Common/Footer'
+import Header from 'components/Common/Header'
 import { Helmet } from 'react-helmet'
 
 type TemplateProps = {
@@ -42,6 +43,7 @@ const Template: FunctionComponent<TemplateProps> = function ({
 
         <html lang="ko" />
       </Helmet>
+      <Header />
       {children}
       <Footer />
     </main>
