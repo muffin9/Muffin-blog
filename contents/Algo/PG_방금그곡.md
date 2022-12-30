@@ -1,5 +1,5 @@
 ---
-date: '2020-07-29'
+date: '2022-12-29'
 title: '[PG] - [3차] 방금그곡'
 categories: ['Algorithm', 'Programmers']
 summary: '프로그래머스 - 2018 KAKAO BLIND RECRUITMENT [3차] 방금그곡'
