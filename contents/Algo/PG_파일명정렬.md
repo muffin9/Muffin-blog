@@ -3,7 +3,7 @@ date: '2022-12-30'
 title: '[PG] - [3차] 파일명 정렬'
 categories: ['Algorithm', 'Programmers']
 summary: '프로그래머스 - 2018 KAKAO BLIND RECRUITMENT [3차] 파일명 정렬'
-thumbnail: './default.png'
+thumbnail: 'images/programmers.png'
 ---
 
 ## 📜 내 풀이
