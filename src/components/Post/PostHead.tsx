@@ -17,6 +17,7 @@ const PostHead: FunctionComponent<PostHeadProps> = function ({
       <GatsbyImage
         className="w-full h-[20rem] absolute z-[-1] brightness-[0.25] md:h-[18.75rem]"
         image={thumbnail || ''}
+        style={{ position: 'absolute' }}
         alt="thumbnail"
       />
       <PostHeadInfo title={title} date={date} categories={categories} />

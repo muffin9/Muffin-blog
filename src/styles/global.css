@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.gatsby-image-wrapper {
-  position: absolute;
-  overflow: hidden;
-}
-
 @keyframes flutter {
   0%,
   35%,
