@@ -9,20 +9,20 @@ const MarkdownRenderer = styled.div([
   `,
   css`
     p {
-      padding: 3px 0;
+      padding: 0.5rem 0;
     }
 
     h1,
     h2,
     h3 {
       font-weight: 800;
-      margin-bottom: 30px;
+      margin-bottom: 1rem;
     }
 
     * + h1,
     * + h2,
     * + h3 {
-      margin-top: 80px;
+      margin-top: 2rem;
     }
 
     hr + h1,
@@ -52,7 +52,7 @@ const MarkdownRenderer = styled.div([
 
     ol,
     ul {
-      padding: 30px 0;
+      padding: 1rem 0;
     }
 
     hr {
