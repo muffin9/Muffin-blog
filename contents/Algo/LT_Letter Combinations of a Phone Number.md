@@ -3,7 +3,7 @@ date: '2022-12-30'
 title: '[LeetCode] - Letter Combinations of a Phone Number'
 categories: ['Algorithm', 'LeetCode']
 summary: '[LeetCode] 21 - Letter Combinations of a Phone Number'
-thumbnail: './default.png'
+thumbnail: 'images/leetCode.jpeg'
 ---
 
 ## 📜 내 풀이
