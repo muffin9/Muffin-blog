@@ -1,7 +1,7 @@
 ---
 date: '2022-01-10'
 title: '[React] - useState'
-categories: ['React', 'useStae']
+categories: ['React', 'useState']
 summary: 'React Hooks의 useState 너 정확하게 어떻게 동작하니?'
 thumbnail: 'images/ReactHooks.png'
 ---
@@ -50,6 +50,21 @@ outer()() // 'muffin'
 `useState` 또한 위 클로저 개념을 빌려와 응용한것이다.
 
 리액트는 useState를 통해 선언된 상태들은 useState 바깥쪽에 저장한다. 이 바깥쪽에 저장된 state는 유일한 키로 접근할 수 있으며 `순서대로` 배열형식으로 저장이 된다.
+
+정확히 이 선언된 상태들이 바깥쪽 어디에 저장되는 걸까 ?
+
+```javascript
+const ReactCurrentDispatcher = {
+  current: null,
+}
+
+export default ReactCurrentDispatcher
+```
+
+useState Hook의 ReactCurrentDispatcher.js 모듈에서의 모습인데 달랑 current 키가 하나만 있는 하나의 객체 형태다. 요것이 전역에 선언된 current라는 값을 담은 변수이다.
+
+즉, 핵심은 useState의 리턴 값의 출처가 전역에서 온다는 점인데, 리액트가 실제로 클로저를 활용해 함수 외부의 값에 접근하는 사실을 알 수 있다.  
+함수형 컴포넌트에서 상태값을 변경하면 외부의 값이 변경되고, 리렌더링(=함수 재호출)을 통해 새로운 값을 받아오게 된다.
 
 이처럼 상태들이 순서대로 저장되기 때문에 useState같은 Hooks를 컴포넌트 최상단에 써야 하는 이유가 바로 이것이다. 만약 반복문이나 컴포넌트 특정 함수 내에서 선언하게 된다면 맨 처음에 useState가 순서대로 맞춘것과 순서가 바뀔수 있기 때문에 무한 루프 현상을 겪거나 예상한 값과는 다른 값을 참조하게 되버린다.
 
@@ -113,3 +128,4 @@ useState와 관련된 내용을 정리하고 직접 만들어보며 리액트 �
 
 1. https://yeoulcoding.tistory.com/149
 2. https://reactjs.org/docs/hooks-state.html
+3. https://goidle.github.io/react/in-depth-react-hooks_1/
