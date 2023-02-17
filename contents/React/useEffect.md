@@ -44,7 +44,7 @@ useEffect(() => {
 
 2. Component안에서 특정 state가 업데이트될 때만 실행하고 싶을 때는 deps위치의 배열 안에 실행 조건을 넣어주면된다.
 
-3. Component가 언마운트 되었을 때(사라질 때) => useEffect는 함수를 반환할 수 있는데, 이 함수를 cleanup함수라 부른다.
+3. Component가 언마운트 되었을 때(사라질 때) => useEffect는 함수를 반환할 수 있는데, 이 함수를 cleanup함수라 부른다. 이 clean-up 함수를 사용하게 되면 렌더링이 될 때, 이전에 남은 함수가 실행되어 메모리 누수가 일어나는 일을 막을 수 있다.(타이머 하뭇 setTimeout 을 사용하여 등록한 작업들 clear 하기, 비교적 무거운 사용했던 인스턴스 제거)
 
 지금까지 살펴본 useEffect에는 단점이 하나 존재한다. 그건, useEffect 함수 내부에 DOM에 영향을 주는 코드가 있을 경우에 사용자 입장에서 화면의 깜빡임 현상이 나타나 사용자 경험을 떨어트릴수 있는 문제다.
 
@@ -90,3 +90,4 @@ const App = () => {
 | 렌더링 - 화면 업데이트 - useEffect | 렌더링 - useLayoutEffect - 화면 업데이트                |
 | 비동기                             | 동기                                                    |
 | 서버로 통신, event handler         | 렌더링 바로 발생 후 DOM요소가 필요할때(scroll position) |
+| render + paint 동작                | render 이후에 paint 동작                                |
